@@ -1,0 +1,35 @@
+package snippet;
+
+public class Snippet {
+	 public static void main(String[] args) {
+	        Scanner scanner = new Scanner(System.in);
+	        
+	        System.out.println("Ingrese la presión inicial (Pa):");
+	        double p1 = scanner.nextDouble();
+	        
+	        System.out.println("Ingrese la velocidad inicial (m/s):");
+	        double v1 = scanner.nextDouble();
+	        
+	        System.out.println("Ingrese la altura inicial (m):");
+	        double h1 = scanner.nextDouble();
+	        
+	        System.out.println("Ingrese la presión final (Pa):");
+	        double p2 = scanner.nextDouble();
+	        
+	        System.out.println("Ingrese la velocidad final (m/s):");
+	        double v2 = scanner.nextDouble();
+	        
+	        System.out.println("Ingrese la altura final (m):");
+	        double h2 = scanner.nextDouble();
+	        
+	        double rho = 1.2; // Densidad del fluido, en kg/m^3
+	        double g = 9.81; // Aceleración debida a la gravedad, en m/s^2
+	        
+	        double term1 = p1 / (rho * g) + v1 * v1 / (2 * g) + h1; // Primer término de la ecuación de Bernoulli
+	        double term2 = p2 / (rho * g) + v2 * v2 / (2 * g) + h2; // Segundo término de la ecuación de Bernoulli
+	        
+	        System.out.println("El valor del primer término de la ecuación de Bernoulli es " + term1);
+	        System.out.println("El valor del segundo término de la ecuación de Bernoulli es " + term2);
+	    }
+}
+
